@@ -79,10 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showFinal() {
         if (totalWins > 0)
-            alert(`Вітаю, ${playerName}! Є виграш! 🎉`);
+            alert(`Вітаю, ${playerName}!! 🎉`);
         else
-            alert(`На жаль, без виграшу цього разу 😐`);
+            alert(`Гемблінг не удався 😐`);
     }
 
     btn.addEventListener("click", spin);
 });
+
