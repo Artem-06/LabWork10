@@ -1,16 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==========================
-    // ІМ’Я ГРАВЦЯ
-    // ==========================
     let askedName = prompt("Введіть своє ім'я:", "");
     let playerName = askedName?.trim() || "Гість";
     document.getElementById("user").textContent = playerName;
 
-
-    // ==========================
-    // ОСНОВНІ ЕЛЕМЕНТИ
-    // ==========================
     const btn = document.getElementById("=generate");
     const tryElem = document.getElementById("try");
     const totalElem = document.getElementById("total");
@@ -22,21 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const reelsList = document.querySelectorAll('.reel');
 
-
-    // ==========================
-    // КОНФІГУРАЦІЯ СЛОТІВ
-    // ==========================
-    const iconMap = ["banana", "seven", "cherry", "plum", "orange", "bell", "bar", "lemon", "melon"];
     const icon_height = 78;
     const num_icons = 9;
     const time_per_icon = 100;
 
     let indexes = [0, 0, 0];
 
-
-    // ==========================
-    // ФУНКЦІЯ РОЛУ ОДНОГО РЕЕЛУ
-    // ==========================
     const roll = (reel, offset = 0) => {
 
         const delta = (offset + 2) * num_icons + Math.round(Math.random() * num_icons);
@@ -62,10 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-
-    // ==========================
-    // СТАРТ ОДНІЄЇ СПРОБИ
-    // ==========================
     function spin() {
         if (tries >= MAX_TRIES) return;
 
@@ -97,10 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-
-    // ==========================
-    // КІНЕЦЬ ГРИ
-    // ==========================
     function showFinal() {
         if (totalWins > 0)
             alert(`Вітаю, ${playerName}! Є виграш! 🎉`);
@@ -108,10 +84,5 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(`На жаль, без виграшу цього разу 😐`);
     }
 
-
-    // ==========================
-    // ПОДІЯ КНОПКИ
-    // ==========================
     btn.addEventListener("click", spin);
-
 });
