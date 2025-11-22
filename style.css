@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #9e9e9e;
+  font-family: "Press Start 2P", cursive;
+}
+
+div {
+  margin: 20px 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slots {
+  width: 273px;
+  height: 234px;
+  padding: 23.4px;
+  display: flex;
+  justify-content: space-between;
+  background: #125ea8;
+}
+.slots .reel {
+  margin: 0;
+  border: 2px solid #000;
+  width: 78px;
+  height: 234px;
+  background-image: url("images/slotreel.png");
+  background-repeat: repeat-y;
+  background-position: 0 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
