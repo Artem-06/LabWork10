@@ -29,7 +29,7 @@ section {
 }
 .slots .reel {
   margin: 0;
-  border: 2px solid #000;
+  border: 3px solid #000;
   width: 78px;
   height: 234px;
   background-image: url("images/slotreel.png");
